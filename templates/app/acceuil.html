@@ -1,0 +1,120 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="slider d-flex align-items-center" style="background-color: #001233; min-height: 80vh;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Section -->
+            <div class="col-lg-6 text-white">
+                <h1 class="display-6 font-weight-bold animate__animated animate__fadeIn">
+                    Optimiser votre parcours académique avec des solutions NFT sécurisées et innovantes !
+                </h1>
+                <p class="lead mt-4">
+                    <b>Authentification décentralisée et immuable</b> : L'utilisation des NFTs pour l'inscription universitaire garantit une authentification transparente et inviolable.
+                </p>
+                <a href="#" class="btn btn-warning btn-lg mr-2">Créer Maintenant</a>
+                
+            </div>
+            <!-- Image Section -->
+            <div class="col-lg-6 text-center">
+                <img src="https://wax.atomichub.io/images/people/hero_default_desktop.webp" alt="NFT Hero Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Schedule Area -->
+    <section class="schedule py-5"  style="background-color: #001233; min-height: 80vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa fa-certificate fa-3x mb-3" style="color: #001233;"></i>
+                            <h4 class="card-title">Obtenir son NFT</h4>
+                            <p class="card-text">Créez et obtenez votre NFT en vérifiant les informations de votre carte INE.</p>
+                            <a href="#" class="btn btn-warning">Créer Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa fa-check-circle fa-3x mb-3 " style="color: #001233;"></i>
+                            <h4 class="card-title">Vérification de son NFT</h4>
+                            <p class="card-text">Vérifiez si votre NFT est toujours valide et actif.</p>
+                            <a href="#" class="btn btn-warning">Vérifier Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa fa-certificate fa-3x mb-3" style="color: #001233;"></i>
+                            <h4 class="card-title">Obtention d'un nouveau NFT</h4>
+                            <p class="card-text">En cas d'expiration ou perte de wallet, obtenez NFT en invalidant l'ancien.</p>
+                            <a href="#" class="btn btn-warning">Renouveler Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Area -->
+    <section class="why-choose py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-4">
+                    <h2>Découvrez Différentes Utilités des NFTs</h2>
+                    <p>Les NFTs révolutionnent de nombreux secteurs en offrant des solutions innovantes et sécurisées.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="choose-left">
+                        <h3>Utilités des NFTs</h3>
+                        <ul>
+                            <li><i class="fa fa-caret-right"></i> Assurance et gestion des polices</li>
+                            <li><i class="fa fa-caret-right"></i> Chaînes d'approvisionnement</li>
+                            <li><i class="fa fa-caret-right"></i> Ventes immobilières</li>
+                            <li><i class="fa fa-caret-right"></i> Licences musicales et droits d'auteur</li>
+                            <li><i class="fa fa-caret-right"></i> Cartes de fidélité et récompenses</li>
+                            <li><i class="fa fa-caret-right"></i> Authentification de produits de luxe</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="video-image">
+                        <a href="https://youtu.be/pEreoxCwC6c" class="btn btn-outline-light btn-lg"><i class="fa fa-play"></i> Voir la Vidéo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Area -->
+    <section class="newsletter bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h6>Inscrivez-vous pour la newsletter</h6>
+                    <p>Restez informé des dernières évolutions concernant les NFTs pour les étudiants de l'UVBF.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form action="mail/mail.php" method="get">
+                        <div class="input-group">
+                            <input type="email" name="EMAIL" class="form-control" placeholder="Votre adresse e-mail" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">S'abonner</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
