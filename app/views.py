@@ -9,9 +9,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 import re
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+# Create your views here.
+
 def acceuil (request) :
     return render(request, 'app/acceuil.html')
-# Create your views here.
+
 
 def contact (request) :
     return render (request, 'app/contact.html')
@@ -19,6 +22,6 @@ def contact (request) :
 def connexion (request) :
     return render (request, 'compte/connexion.html')
 
-
+@login_required
 def form (request) :
     return render (request, 'app/form_wallet.html')
