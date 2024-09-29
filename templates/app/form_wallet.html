@@ -1,0 +1,126 @@
+<!-- templates/app/wallet.html -->
+{% comment %} {% extends 'app/base.html' %}
+
+{% block content %}
+<div class="banner-container">
+    <div class="text-section">
+        <h1>Entrez l'adresse de votre wallet pour recevoir votre NFT.</h1>
+        <input type="text" placeholder="Adresse du wallet" class="wallet-input">
+        <button type="button">CONNECT WAX WALLET</button>
+        <p>Si vous n'avez pas de compte, cliquez sur ce lien pour en créer un : 
+            <a href="#" class="create-account-link">Get</a>
+        </p>
+    </div>
+    <div class="image-section">
+        <img src="https://wax.atomichub.io/images/wombat_small.webp" alt="WAX Coin Small" class="img1">
+        <img src="https://wax.atomichub.io/images/wombat_medium.webp" alt="WAX Coin Medium" class="img2">
+        <img src="https://wax.atomichub.io/images/wombat_big.webp" alt="WAX Coin Big" class="img3"> 
+    </div>
+</div>
+{% endblock %} {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recevez Votre NFT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1b41, #3a3d98); /* Dégradé bleu nuit */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(37, 39, 96, 0.9); /* Fond semi-transparent */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(10px); /* Flou en arrière-plan */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #00eaff; /* Bleu turquoise */
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #00eaff; /* Bordure bleue turquoise */
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #008bbd; /* Couleur à l'état focus */
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00eaff; /* Bleu turquoise */
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 234, 255, 0.4);
+        }
+
+        button:hover {
+            background-color: #008bbd;
+            box-shadow: 0 12px 20px rgba(0, 234, 255, 0.6);
+            transform: translateY(-3px); /* Effet de lévitation */
+        }
+
+        button:active {
+            transform: translateY(0); /* Retour à la normale quand on clique */
+            box-shadow: 0 5px 10px rgba(0, 234, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recevez Votre NFT</h1>
+        <p>Entrez l'adresse de votre wallet pour recevoir votre NFT :</p>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="wallet_address" placeholder="Adresse de wallet" required>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>
+
