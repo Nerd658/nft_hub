@@ -18,3 +18,7 @@ def contact (request) :
 
 def connexion (request) :
     return render (request, 'compte/connexion.html')
+
+
+def form (request) :
+    return render (request, 'app/form_wallet.html')
